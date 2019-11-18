@@ -13,7 +13,7 @@ TOKENIZER=$SCRIPTS/tokenizer/tokenizer.perl
 LC=$SCRIPTS/tokenizer/lowercase.perl
 CLEAN=$SCRIPTS/training/clean-corpus-n.perl
 BPEROOT=subword-nmt/subword_nmt
-BPE_TOKENS=20000
+BPE_TOKENS=25000
 
 URL="https://wit3.fbk.eu/archive/2014-01/texts/es/en/es-en.tgz"
 URL1="https://www.statmt.org/europarl/v6/es-en.tgz"
@@ -55,8 +55,8 @@ wget "$URL1"
 tar zxvf $GZ
 wget "$URL2"
 gzip -d $GZ2
-cut -f1 en-es.bicleaner07.txt > big-text1.en
-cut -f2 en-es.bicleaner07.txt > big-text1.es
+cut -f1 en-es.bicleaner07.txt > big-text.en
+cut -f2 en-es.bicleaner07.txt > big-text.es
 wget "$URL3"
 wget "$URL4"
 cat UNv1.0.en-es.tar.gz.* >UNv1.0.en-es.tar.gz
