@@ -79,7 +79,7 @@ for l in $src $tgt; do
     sed -e 's/<\/title>//g' | \
     sed -e 's/<description>//g' | \
     sed -e 's/<\/description>//g' > final.$l
-    cat final.$l $orig/$lang/europarl-v6.es-en.$l '''$orig/$lang/big-text.$l''' $orig/$lang/en-es/UNv1.0.en-es.$l | \
+    cat final.$l $orig/$lang/europarl-v6.es-en.$l $orig/$lang/en-es/UNv1.0.en-es.$l | \
     perl $TOKENIZER -threads 8 -l $l > $tmp/$tok
     echo ""
 done
